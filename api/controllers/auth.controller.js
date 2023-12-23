@@ -67,7 +67,7 @@ export const google = async (req, res, next) => {
         Math.random().toString(36).slice(-8) +
         Math.random().toString(36).slice(-8); // 36->(0 to 9 and A to Z, -8 means last eight digit)
       const hashedPassword = bcryptjs.hashSync(generatedPassword, 10);
-      const newUser = newUser({
+      const newUser = new User({
         username: req.body.name.split(" ").join("").toLowerCase()+Math.random().toString(36).slice(-4),  // Anas7217 like this
         email: req.body.email,
         password: hashedPassword,
