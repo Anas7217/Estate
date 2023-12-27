@@ -20,8 +20,8 @@ mongoose.connect(process.env.MONGO_URL)
 
 const app=express()
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(cookieParser())
 
